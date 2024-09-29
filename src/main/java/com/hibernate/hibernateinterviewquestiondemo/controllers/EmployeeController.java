@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/employee")
 public class EmployeeController {
   private final EmployeeService employeeService;
-
   private final SessionFactory sessionFactory;
 
   public EmployeeController(EmployeeService employeeService, SessionFactory sessionFactory) {
@@ -53,6 +52,11 @@ public class EmployeeController {
     System.out.println(employee3.getFirstName() + " " + employee3.getLastName() + " exists status : " + doesExistEmp3);
 
     return new ResponseEntity<>(updated, HttpStatus.CREATED);
+  }
+
+  @GetMapping("/entityLifeCycle")
+  public void showEntityLifeCycle() {
+    employeeService.showEntityLifeCycle();
   }
 
 
