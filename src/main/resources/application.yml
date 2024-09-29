@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: hibernate-interview-question-demo
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    defer-datasource-initialization: true
+
+
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+
+
+  h2:
+    console:
+      enabled: true
+
+  sql:
+    init:
+      mode: embedded
+

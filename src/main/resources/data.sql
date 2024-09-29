@@ -1,0 +1,2 @@
+INSERT INTO TBL_EMPLOYEES(id,first_name, last_name, email) VALUES (1,'phuong', 'le', 'phuongsover@gmail.com'),
+                                                               (2,'phuong', 'nguyen', 'phuongsover1@gmail.com');
